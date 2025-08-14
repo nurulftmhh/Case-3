@@ -16,6 +16,7 @@
  
 <img width="741" height="289" alt="image" src="https://github.com/user-attachments/assets/ef626ceb-b044-4226-aa0f-8f1b006e52ad" />
 
+
 5. Akses API menggunakan Postman
 - Pilih method POST
 - Masukkan URL `http://localhost:8000/recommend`
@@ -29,6 +30,7 @@
 - Klik Send
  
 <img width="1367" height="656" alt="image" src="https://github.com/user-attachments/assets/92c39eb2-5a5e-4195-a22f-64e646734d9f" />
+
 
 6. Opsi lain selain menggunakan Postman, bisa juga dengan menjalankan test.py jika server sudah dijalankan. Atau bisa menggunakan swagger UI:
 - Buka http://localhost:8000/docs

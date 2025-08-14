@@ -3,9 +3,9 @@ import json
 
 test_cases = [
     {
-        "gender": "male",
-        "age": 22,
-        "symptoms": ["batuk", "mual", "sesak napas"]
+        "gender": "female",
+        "age": 62,
+        "symptoms": ["pusing", "mual", "sulit berjalan"]
     },
 ]
 

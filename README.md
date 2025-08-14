@@ -23,13 +23,13 @@
 - Pada tab Header tambahkan "Content-Type    application/json"
 - Pada tab Body, pilih raw dan isi JSON, contoh:
   `{
-  "gender": "male",
-  "age": 22,
-  "symptoms": ["batuk", "mual", "sesak napas"]
+    "gender": "female",
+    "age": 62,
+    "symptoms": ["pusing", "mual", "sulit berjalan"]
 }`
 - Klik Send
  
-<img width="1367" height="656" alt="image" src="https://github.com/user-attachments/assets/92c39eb2-5a5e-4195-a22f-64e646734d9f" />
+<img width="1378" height="668" alt="image" src="https://github.com/user-attachments/assets/c0b9e3c0-8330-4dea-9545-0328d06010da" />
 
 
 6. Opsi lain selain menggunakan Postman, bisa juga dengan menjalankan test.py jika server sudah dijalankan. Atau bisa menggunakan swagger UI:
@@ -37,11 +37,13 @@
 - Cari endpoint POST /recommend, klik Try it out
 - Masukkan JSON sesuai format di kolom Request body
  
-<img width="1801" height="792" alt="image" src="https://github.com/user-attachments/assets/e9836487-e8f9-4a68-b599-2723ea785a12" />
+<img width="1785" height="795" alt="image" src="https://github.com/user-attachments/assets/0ff8c15c-41e4-4f4c-83cc-a98f4e9e3812" />
+
 
 - Klik Execute
  
-<img width="1800" height="768" alt="image" src="https://github.com/user-attachments/assets/88062bda-cfd0-475b-a53d-09998295ca12" />
+<img width="1803" height="776" alt="image" src="https://github.com/user-attachments/assets/2e3dea7c-6396-43f6-9847-3bdf27a956f4" />
+
  
  
    

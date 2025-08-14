@@ -14,7 +14,7 @@
  
 4. Server berhasil dijalankan
  
-<img width="741" height="289" alt="image" src="https://github.com/user-attachments/assets/ef626ceb-b044-4226-aa0f-8f1b006e52ad" />
+<img width="792" height="309" alt="image" src="https://github.com/user-attachments/assets/31064940-2965-4286-88bb-61ee638ae02c" />
 
 
 5. Akses API menggunakan Postman

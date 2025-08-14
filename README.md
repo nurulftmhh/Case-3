@@ -32,7 +32,7 @@
 <img width="1378" height="668" alt="image" src="https://github.com/user-attachments/assets/c0b9e3c0-8330-4dea-9545-0328d06010da" />
 
 
-6. Opsi lain selain menggunakan Postman, bisa juga dengan menjalankan test.py jika server sudah dijalankan. Atau bisa menggunakan swagger UI:
+6. Opsi lain selain menggunakan Postman, bisa juga dengan menggunakan swagger UI:
 - Buka http://localhost:8000/docs
 - Cari endpoint POST /recommend, klik Try it out
 - Masukkan JSON sesuai format di kolom Request body

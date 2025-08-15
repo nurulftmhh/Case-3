@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class GoogleAI(LLM):
-    _model: any = PrivateAttr()
+    _model = PrivateAttr()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -19,12 +19,12 @@ class GoogleAI(LLM):
         if not api_key:
             raise ValueError("GOOGLE_API_KEY not found in environment variables")
         genai.configure(api_key=api_key)
-        self._model = genai.GenerativeModel('gemini-1.5-flash')
-    
+        object.__setattr__(self, "_model", genai.GenerativeModel("gemini-1.5-flash"))
+
     def _call(self, prompt: str, stop=None) -> str:
         response = self._model.generate_content(prompt)
         return response.text
-    
+
     @property
     def _llm_type(self) -> str:
         return "google_ai"
@@ -40,7 +40,8 @@ prompt_template = PromptTemplate(
     - Jenis kelamin: {gender}
     - Umur: {age} tahun  
     - Gejala: {symptoms}
-    Pilih departemen rumah sakit yang paling tepat dari: Cardiology, Neurology, Orthopedics, Internal Medicine, Emergency, Gastroenterology, Pulmonology, Dermatology, Ophthalmology, ENT, Urology, Gynecology, Pediatrics, Psychiatry, General Surgery.    
+
+    Pilih departemen rumah sakit yang paling tepat dari: Cardiology, Neurology, Orthopedics, Internal Medicine, Emergency, Gastroenterology, Pulmonology, Dermatology, Ophthalmology, ENT, Urology, Gynecology, Pediatrics, Psychiatry, General Surgery
     Jawab hanya dengan nama departemen saja.
     """
 )
@@ -55,6 +56,7 @@ class PatientInfo(BaseModel):
 class RecommendationResponse(BaseModel):
     recommended_department: str
 
+# POST endpoint
 @app.post("/recommend", response_model=RecommendationResponse)
 async def recommend_department(patient: PatientInfo):
     try:
@@ -69,6 +71,7 @@ async def recommend_department(patient: PatientInfo):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+# GET root endpoint
 @app.get("/")
 async def root():
     return {"message": "Hospital Triage System API with LangChain"}
